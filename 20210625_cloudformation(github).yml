@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+# Parameters
+Parameters:
+  NameKeyPrefix:
+    Type: String
+
+# AWSの各リソースの定義
+Resources:
+  # EC2インスタンスの定義
+  Ec21a2:
+    Type: AWS::EC2::Instance
+    Properties:
+      SubnetId: subnet-0077ef4dae1c1be8a
+      InstanceType: t2.micro
+      AvailabilityZone: ap-northeast-1a
+      KeyName: 20210510
+      Monitoring: false
+      ImageId: ami-06631ebafb3ae5d34
+      SecurityGroupIds:
+        - sg-06cfebf6be65f6d2e
