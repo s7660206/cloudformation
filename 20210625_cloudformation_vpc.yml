@@ -1,10 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
 
-# Parameters
-Parameters:
-  NameKeyPrefix:
-    Type: String
-
 # AWSの各リソースの定義
 Resources:
   # VPCの定義
