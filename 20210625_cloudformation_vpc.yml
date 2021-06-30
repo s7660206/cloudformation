@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+# Parameters
+Parameters:
+  NameKeyPrefix:
+    Type: String
+
+# AWSの各リソースの定義
+Resources:
+  # VPCの定義
+  VPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      EnableDnsHostnames: 'true'
+      EnableDnsSupport: 'true'
+      Tags:
+        - Key: Name
+          Value: VPCJENKINS
